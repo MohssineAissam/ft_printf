@@ -16,8 +16,6 @@ This library is built upon my `libft` project.
 * [About the Project](#about-the-project)
 * [Features Implemented](#features-implemented)
 * [How to Use](#how-to-use)
-* [Example](#example)
-* [Author](#author)
 
 ---
 
@@ -90,41 +88,4 @@ cd YOUR_REPO_NAME
 
 # Compile
 make
-3. Link to Your Project
 
-To use the library in your own C program, include the header file ft_printf.h and compile your project by linking the libftprintf.a and libft.a libraries.
-Bash
-
-# Compile your program and link the libraries
-# (This assumes libftprintf.a and libft.a are in the same directory)
-gcc your_program.c libftprintf.a libft/libft.a -o your_program
-
-💡 Example
-
-Here is a simple example of how to use the function in your main.c:
-C
-
-#include "ft_printf.h"
-
-int	main(void)
-{
-	char	*str = "world";
-	int		num = 42;
-	int		ret;
-
-	// Example 1: Basic string and decimal
-	ret = ft_printf("Hello, %s! The number is %d.\n", str, num);
-	ft_printf("Total characters written: %d\n\n", ret);
-
-	// Example 2: Pointers and Hex
-	ft_printf("The address of str is: %p\n", str);
-	ft_printf("42 in hex is: %x (lowercase) or %X (uppercase)\n\n", num, num);
-
-	// Example 3: Flags and width
-	ft_printf("--- Bonus Examples ---\n");
-	ft_printf("Padded number: |%05d|\n", 123);
-	ft_printf("Left-justified: |%-5d|\n", 123);
-	ft_printf("Pointer with '0x': |%#x|\n", 1337);
-
-	return (0);
-}
